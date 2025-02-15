@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chakra Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="chakra-name"></h1>
+    <img id="chakra-image" width="200" height="200">
+    <p id="chakra-description"></p>
+
+    <script>
+        // 🟢 Step 1: Create a JavaScript object to store chakra data
+        const chakraData = {
+            root: { 
+                name: "Root Chakra (Muladhara)", 
+                img: "assets/root.jpg", 
+                desc: "The root chakra is the foundation of our energy system. It governs security, stability, and survival instincts."
+            },
+            sacral: { 
+                name: "Sacral Chakra (Svadhisthana)", 
+                img: "assets/sacral.jpg", 
+                desc: "The sacral chakra governs creativity, emotions, and sensuality, associated with the element of water."
+            },
+            solar: { 
+                name: "Solar Plexus Chakra (Manipura)", 
+                img: "assets/solar.jpg", 
+                desc: "The solar plexus chakra is the center of personal power, self-esteem, and confidence."
+            },
+            heart: { 
+                name: "Heart Chakra (Anahata)", 
+                img: "assets/heart.jpg", 
+                desc: "The heart chakra is the center of love, compassion, and emotional healing."
+            },
+            throat: { 
+                name: "Throat Chakra (Vishuddha)", 
+                img: "assets/throat.jpg", 
+                desc: "The throat chakra governs communication, self-expression, and truth."
+            },
+            third_eye: { 
+                name: "Third Eye Chakra (Ajna)", 
+                img: "assets/third-eye.jpg", 
+                desc: "The third eye chakra is the seat of intuition, insight, and spiritual awareness."
+            },
+            crown: { 
+                name: "Crown Chakra (Sahasrara)", 
+                img: "assets/crown.jpg", 
+                desc: "The crown chakra represents spiritual connection, enlightenment, and higher consciousness."
+            }
+        };
+
+        // 🟢 Step 2: Get the chakra name from the URL
+        const params = new URLSearchParams(window.location.search);
+        const chakraKey = params.get("chakra");  // Extracts 'root', 'sacral', etc.
+
+        // 🟢 Step 3: Load the relevant chakra details
+        if (chakraData[chakraKey]) {
+            document.getElementById("chakra-name").innerText = chakraData[chakraKey].name;
+            document.getElementById("chakra-image").src = chakraData[chakraKey].img;
+            document.getElementById("chakra-description").innerText = chakraData[chakraKey].desc;
+        } else {
+            // 🛑 If the URL parameter is invalid, show an error message
+            document.body.innerHTML = "<h1>Chakra not found</h1>";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents any side scrolling */
+}
+
+/* Movable Background Image */
+body {
+    background-color:#f6ecdd
+}
+
+h1 {
+    text-align: center;
+    color: #B5828C;
+    font-family: "Edu AU VIC WA NT Pre", serif;
+}
+
+p {
+    color: #be7a7c;
+    font-family: "Pangolin", serif;
+    text-align: justify;
+    font-size: 1.05rem;
+    margin: 0 10%;
+}
+
+h2 {
+    font-family: "Eczar", serif;
+    font-weight: 500;
+    color: #7b3040;
+    text-align: center;
+}
+span
+{
+    color: #7b3040;
+    font-weight: bold;
+}
+
+/* Centering the list and images */
+#align {
+    text-align: center;
+    list-style-position: inside;
+}
+
+#align ol {
+    padding-left: 0;
+}
+
+#align li {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #6D2932;
+    margin: 20px 0;
+}
+
+/* Improved Image Styling */
+.rotate {
+    border-radius: 50%;
+    animation: rotateAnimation 120s linear infinite;
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.rotate[alt="Root Chakra"]:hover {
+    box-shadow: 0 0 25px 10px rgba(255, 0, 0, 0.8); 
+}
+
+/* Sacral Chakra - Orange Glow */
+.rotate[alt="Sacral Chakra"]:hover {
+    box-shadow: 0 0 25px 10px rgba(255, 119, 0, 0.815);
+}
+
+/* Solar Plexus Chakra - Yellow Glow */
+.rotate[alt="Solar Plexus Chakra"]:hover {
+    box-shadow: 0 0 25px 10px rgba(255, 223, 0, 0.8);
+}
+
+/* Heart Chakra - Green Glow */
+.rotate[alt="Heart Chakra"]:hover {
+    box-shadow: 0 0 25px 10px rgba(0, 255, 127, 0.8);
+}
+
+/* Throat Chakra - Blue Glow */
+.rotate[alt="Throat Chakra"]:hover {
+    box-shadow: 0 0 25px 10px rgba(0, 191, 255, 0.8);
+}
+
+/* Third Eye Chakra - Indigo Glow */
+.rotate[alt="Third Eye Chakra"]:hover {
+    box-shadow: 0 0 25px 10px rgba(4, 2, 125, 0.8);
+}
+
+/* Crown Chakra - Violet Glow */
+.rotate[alt="Crown Chakra"]:hover {
+    box-shadow: 0 0 25px 10px rgba(148, 0, 211, 0.8);
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
